@@ -2,6 +2,7 @@ $(document).ready(function() {
   console.log("hello world");
 
   function onSignIn(googleUser) {
+    console.log("sign on");
     var profile = googleUser.getBasicProfile();
     console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log("Name: " + profile.getName());
