@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log("hello world");
-
   function onSignIn(googleUser) {
     console.log("sign on");
     var profile = googleUser.getBasicProfile();
