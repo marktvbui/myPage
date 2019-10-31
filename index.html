@@ -19,6 +19,16 @@
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <a class="g-signout" href="#" onclick="signOut();">Sign out</a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function onSignIn(googleUser) {
+            console.log("sign on");
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log("Name: " + profile.getName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+    </script>
     <script src="./assets/javascript/app.js" async defer></script>
 </body>
 
